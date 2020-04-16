@@ -1,0 +1,25 @@
+.header-container {
+  margin-top: 50px;
+  line-height: 1.2;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+  padding: 0;
+
+  h1 {
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    padding: 0;
+    color: #a50810;
+    margin-bottom: 15px;
+  }
+
+  & .header {
+    display: flex;
+    padding: 0;
+
+    .icon {
+      display: block;
+      position: absolute;
+      right: 3px;
+    }
+  }
+}

@@ -25,77 +25,92 @@ const linkIcons = {
 };
 
 const socialIcons = {
-    className: "social-icons",
-    size: "1.9em"
+  className: "social-icons",
+  size: "1.9em"
 };
 
-const SideBar = () => (
-  <SideBarContainer>
-    <ImageContainer>
-      <Name> Brad Bentow</Name>
-      <img src="/images/me.jpg" alt="me" />
-    </ImageContainer>
-    <NavLinks>
-      <ul>
-        <IconContext.Provider value={linkIcons}>
-          <li>
-            <Link to="#" className="active">
-              <AiOutlineHome /> home
+const getUrl = window.location.href.split('/');
+
+class SideBar extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      nav_location: getUrl[3]
+    }
+  }
+  render() {
+    let {nav_location} = this.state;
+
+    return (
+      <SideBarContainer>
+        <ImageContainer>
+          <Name> Brad Bentow</Name>
+          <img src="/images/me.jpg" alt="me" />
+        </ImageContainer>
+        <NavLinks>
+          <ul>
+            <IconContext.Provider value={linkIcons}>
+              <li>
+                <Link to="/" className="active" onClick={ () => (this.setState({nav_location: ''}))} className={(this.state.nav_location == '') ? "active" : ""}>
+                  <AiOutlineHome /> home
             </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <FaRegUser /> about me
+              </li>
+              <li>
+                <Link to="/about" onClick={ () => (this.setState({nav_location: 'about'}))} className={(this.state.nav_location == 'about') ? "active" : ""}>
+                  <FaRegUser /> about me
             </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <FaRegNewspaper /> resume
+              </li>
+              <li>
+                <Link to="#">
+                  <FaRegNewspaper /> resume
             </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <GoGithubAction /> portfolio
+              </li>
+              <li>
+                <Link to="#">
+                  <GoGithubAction /> portfolio
             </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <GoMail /> contact
+              </li>
+              <li>
+                <Link to="#">
+                  <GoMail /> contact
             </Link>
-          </li>
-        </IconContext.Provider>
-      </ul>
-    </NavLinks>
-    <div className="copyright">
-      <ListSocial>
-        <IconContext.Provider value={socialIcons}>
-          <li>
-            <Link to="#">
-              <FaFacebookSquare />
-            </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <FaGithubSquare />
-            </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <FaLinkedin />
-            </Link>
-          </li>
-          <li>
-            <Link to="#">
-              <FaTwitterSquare />
-            </Link>
-          </li>
-        </IconContext.Provider>
-      </ListSocial>
-      <span>
-        {new Date().getFullYear()} © Brad Bentow. <br /> All Right Reserved.
+              </li>
+            </IconContext.Provider>
+          </ul>
+        </NavLinks>
+        <div className="copyright">
+          <ListSocial>
+            <IconContext.Provider value={socialIcons}>
+              <li>
+                <Link to="#">
+                  <FaFacebookSquare />
+                </Link>
+              </li>
+              <li>
+                <Link to="#">
+                  <FaGithubSquare />
+                </Link>
+              </li>
+              <li>
+                <Link to="#">
+                  <FaLinkedin />
+                </Link>
+              </li>
+              <li>
+                <Link to="#">
+                  <FaTwitterSquare />
+                </Link>
+              </li>
+            </IconContext.Provider>
+          </ListSocial>
+          <span>
+            {new Date().getFullYear()} © Brad Bentow. <br /> All Right Reserved.
       </span>
-    </div>
-  </SideBarContainer>
-);
+        </div>
+      </SideBarContainer>)
+  }
+};
+
 
 export default SideBar;

@@ -7,8 +7,11 @@ body {
   padding: 0;
   background-color: #2C2D2F;
   font-family: 'Roboto Slab', serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-* {
+*:focus {
   box-sizing: border-box;
+  outline: none !important;
 }

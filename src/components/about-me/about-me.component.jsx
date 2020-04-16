@@ -1,31 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { FaRegUser } from "react-icons/fa";
-import { IconContext } from "react-icons";
 import "./about-me.styles.scss";
+import AboutSlider from '../../components/about-me/carousel.component';
+import QandA from './q-and-a.component';
+import PageHeader from '../page-header/page-header.component';
 
-const headerIcons = {
-  className: "header-icons",
-  size: "2.8em",
-  color: "#a50810",
-};
+
 
 const HomepageComponent = () => (
   <Container>
-    <Row className="header-container d-flex justify-content-center">
-      <IconContext.Provider value={headerIcons}>
-        <Col lg={true} md={true} sm={true} xs={true} className="header">
-          <span className="title">
-            <h1>About Me.</h1>
-          </span>
-        </Col>
-        <Col lg={true} md={true} sm={true} xs={true} className="header">
-          <span className="icon">
-            <FaRegUser />
-          </span>
-        </Col>
-      </IconContext.Provider>
-    </Row>
+    <PageHeader title="About Me" icon='user' />
     <Row className="article-info">
       <Col lg={8} style={{ padding: "0" }}>
         <span className="article-title">
@@ -52,50 +36,23 @@ const HomepageComponent = () => (
           <h3>Personal Info</h3>
         </span>
         <div className="q-and-a">
-          <div className="retainer">
-            <span className="question">Name</span>
-            <span className="seperator"> : </span>
-            <span className="answer">Bradley "Brad" Bentow</span>
-          </div>
 
-          <div className="retainer">
-            <span className="question">Age</span>
-            <span className="seperator"> : </span>
-            <span className="answer">{new Date().getFullYear() - 1991} years old</span>
-          </div>
+          <QandA question="Name" answer="Bradley Bentow" />
+          <QandA question="Age" answer={(new Date().getFullYear() - 1991) + " years old"} />
+          <QandA question="Residence" answer="Montesano, WA" />
+          <QandA question="Email" answer="bentow131@gmail.com" />
+          <QandA question="Phone" answer="+1 (360) 584-0037" />
 
-          <div className="retainer">
-            <span className="question">Residence</span>
-            <span className="seperator"> : </span>
-            <span className="answer">Montesano, WA</span>
-          </div>
-
-          <div className="retainer">
-            <span className="question">Email</span>
-            <span className="seperator"> : </span>
-            <span className="answer">bentow131@gmail.com</span>
-          </div>
-
-          <div className="retainer">
-            <span className="question">Phone</span>
-            <span className="seperator"> : </span>
-            <span className="answer">+1 (360) 584-0037</span>
-          </div>
           <div className="btn-retainer">
-            <Button varient="primary">Download Resume</Button>  
-        </div>
+            <Button varient="primary" href="./stash/Bradley_Bentow_Resume.pdf" download className="download-btn">Download Resume</Button>
+          </div>
         </div>
       </Col>
     </Row>
     <Row>
-    <Col lg={{span: 5, offset: 3}} className="language-badge"><h2>Computer Languages</h2></Col>
+      <Col lg={{ span: 5, offset: 3 }} className="language-badge"><h2>Knowledge</h2></Col>
     </Row>
-    <Row>
-        
-        <Col>
-            test
-        </Col>
-    </Row>
+    <AboutSlider />
   </Container>
 );
 

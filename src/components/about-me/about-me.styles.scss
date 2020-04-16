@@ -1,29 +1,3 @@
-.header-container {
-  margin-top: 50px;
-  line-height: 1.2;
-  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
-  padding: 0;
-
-  h1 {
-    font-weight: 700;
-    font-family: "Playfair Display", serif;
-    padding: 0;
-    color: #a50810;
-    margin-bottom: 15px;
-  }
-
-  & .header {
-    display: flex;
-    padding: 0;
-
-    .icon {
-      display: block;
-      position: absolute;
-      right: 3px;
-    }
-  }
-}
-
 .article-info {
   color: #e1e1e1;
   margin-top: 25px;
@@ -69,7 +43,7 @@
     .btn-retainer {
       margin-top: 20px;
 
-      button {
+      .download-btn {
         padding: 10px 20px;
         background-color: transparent;
         border: 1px solid;
@@ -85,6 +59,10 @@
           transition: border-color 0.5s ease-in-out;
           transition: color 0.5s ease-in-out;
         }
+
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
@@ -98,4 +76,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 30px;
+}
+
+.language-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
