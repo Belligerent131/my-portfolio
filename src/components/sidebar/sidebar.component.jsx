@@ -52,27 +52,27 @@ class SideBar extends React.Component {
           <ul>
             <IconContext.Provider value={linkIcons}>
               <li>
-                <Link to="/" className="active" onClick={ () => (this.setState({nav_location: ''}))} className={(this.state.nav_location == '') ? "active" : ""}>
+                <Link to="/" onClick={ () => (this.setState({nav_location: ''}))} className={(nav_location === '') ? "active" : ""}>
                   <AiOutlineHome /> home
             </Link>
               </li>
               <li>
-                <Link to="/about" onClick={ () => (this.setState({nav_location: 'about'}))} className={(this.state.nav_location == 'about') ? "active" : ""}>
+                <Link to="/about" onClick={ () => (this.setState({nav_location: 'about'}))} className={(nav_location === 'about') ? "active" : ""}>
                   <FaRegUser /> about me
             </Link>
               </li>
               <li>
-                <Link to="#">
+                <Link to="/resume" onClick={ () => (this.setState({nav_location: 'resume'}))} className={(nav_location === 'resume') ? "active" : ""}>
                   <FaRegNewspaper /> resume
             </Link>
               </li>
               <li>
-                <Link to="#">
+                <Link to="/portfolio" onClick={ () => (this.setState({nav_location: 'portfolio'}))} className={(nav_location === 'portfolio') ? "active" : ""}>
                   <GoGithubAction /> portfolio
             </Link>
               </li>
               <li>
-                <Link to="#">
+                <Link to="/contact" onClick={ () => (this.setState({nav_location: 'contact'}))} className={(nav_location === 'contact') ? "active" : ""}>
                   <GoMail /> contact
             </Link>
               </li>

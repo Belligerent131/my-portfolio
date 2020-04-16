@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap";
-import { FaRegUser } from "react-icons/fa";
+import { FaRegUser, FaRegNewspaper } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import {GoGithubAction, GoMail} from 'react-icons/go';
 import './page-header.styles.scss';
 
 const headerIcons = {
@@ -15,11 +16,16 @@ const setIcon = (icon) => {
         case 'user':
         default:
             return <FaRegUser />;
+        case 'resume':
+            return <FaRegNewspaper />
+        case 'portfolio':
+            return <GoGithubAction />
+        case 'contact':
+            return <GoMail />
     }
 }
 
-const PageHeader = ({title, icon}) => {
-
+const PageHeader = ({title, icon}, ...otherProps) => {
 
     return(
         <Row className="header-container d-flex justify-content-center">

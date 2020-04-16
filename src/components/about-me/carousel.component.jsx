@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { Row, Col } from "react-bootstrap";
-import { CSharpIcon, PgSqlIcon, JavascriptIcon, PythonIcon, ReactIcon, TypescriptIcon, DjangoIcon, FirebaseIcon,
+import { CSharpIcon, PgSqlIcon, JavascriptIcon, PythonIcon, ReactIcon, DjangoIcon, FirebaseIcon,
     BootstrapIcon, ReduxIcon, CppIcon, AzureIcon } from '../svg/icon-images.component';
 
 
