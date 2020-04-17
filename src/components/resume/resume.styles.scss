@@ -1,0 +1,66 @@
+.resume-container {
+  margin-top: 30px;
+  color: #e1e1e1;
+  margin-bottom: 30px;
+}
+
+.experiences {
+  display: flex;
+  flex-direction: row;
+  color: #e1e1e1;
+  margin-top: 20px;
+
+  .row {
+    margin-bottom: 55px;
+  }
+
+  .item {
+    border-left: 2px solid red;
+    padding-left: 45px;
+    position: relative;
+
+    .company-name {
+      display: flex;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Playfair", serif;
+      margin-bottom: 1px;
+    }
+
+    .company-location {
+      display: flex;
+      font-size: 12x;
+      font-weight: bold;
+      color: red;
+      font-family: "Playfair", serif;
+      margin-bottom: 3px;
+    }
+
+    .company-description {
+      display: flex;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.2;
+      font-family: "Playfair", serif;
+      text-align: justify;
+    }
+
+    .start {
+      position: absolute;
+      left: -110px;
+      top: -6px;
+      text-align: right;
+      padding: 3px;
+      width: 100px;
+    }
+
+    .stop {
+      position: absolute;
+      left: -110px;
+      bottom: -5px;
+      text-align: right;
+      padding: 3px;
+      width: 100px;
+    }
+  }
+}
