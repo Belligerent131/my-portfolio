@@ -11,7 +11,11 @@ body {
   overflow-x: hidden;
 }
 
-*:focus {
+* {
   box-sizing: border-box;
+}
+
+*:focus {
   outline: none !important;
+  box-shadow: none !important;
 }

@@ -45,7 +45,7 @@ class SideBar extends React.Component {
     return (
       <SideBarContainer>
         <ImageContainer>
-          <Name> Brad Bentow</Name>
+          <Name> Bradley Bentow</Name>
           <img src="/images/me.jpg" alt="me" />
         </ImageContainer>
         <NavLinks>

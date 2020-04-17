@@ -44,7 +44,7 @@ export const Name = styled.div`
   background-color: #580000;
   bottom: 0;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   opacity: 0.8;
   color: #fff;

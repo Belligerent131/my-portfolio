@@ -1,0 +1,82 @@
+.contact-form-wrapper {
+    margin-top: 50px;
+
+    .contact-form {
+        padding: 0;
+        margin: 0;
+
+        .input-text {
+            input {
+                background-color: transparent;
+                border-radius: 0;
+                border-width: 1px;
+                border-color: rgb(190, 190, 190);
+                padding: 5px;
+                color: #fff;
+    
+                &:focus {
+                    outline: none;
+                    border-color: #fff;
+                    transition: border-color 0.5s ease-in-out;
+                }
+            }
+        }
+
+        .textarea-message {
+            background-color: transparent;
+            color: #fff;
+            border-color: rgb(151, 151, 151);
+
+            &:focus {
+                outline: none;
+                border-color: #fff;
+                transition: border-color 0.5s ease-in-out;
+            }
+        }
+
+        .form-label {
+            color: #fff;
+        }
+
+        .send-message-btn {
+            background-color: transparent;
+            border: 2px solid rgb(180, 12, 12);
+            color: rgb(180, 12, 12);
+            transition: 0.5s ease-in-out; 
+
+            &:hover {
+                border-color: red;
+                color: red;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+.section-title {
+    margin-top: 30px;
+
+    h2 {
+        border-bottom: 2px solid red;
+        padding: 5px 20px;
+        color: #e1e1e1;
+    }
+}
+
+.additions-container {
+    width: 100%;
+
+    .add-item {
+        color: #e1e1e1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-icons{ 
+        display: flex;
+        fill: red;
+        margin-bottom: 25px;
+    }
+}
