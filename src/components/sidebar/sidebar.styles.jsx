@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Container, Row } from "react-bootstrap";
+import styled from 'styled-components';
+import { Container, Row } from 'react-bootstrap';
 
 export const ImageContainer = styled(Row)`
   width: 200px;
@@ -19,17 +19,21 @@ export const SideBarContainer = styled(Container)`
   display: block;
   margin: 0;
   z-index: 5;
-  
 
   .copyright {
     color: #fff;
     display: block;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    margin-top: 50px;
+    margin-left: -20px;
     left: 0;
     width: 200px;
     text-align: center;
     padding: 5px 0;
+  }
+
+  @media (max-width: 425px) {
+    visibility: hidden;
   }
 `;
 

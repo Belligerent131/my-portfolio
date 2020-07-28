@@ -23,7 +23,7 @@
       display: flex;
       font-size: 20px;
       font-weight: bold;
-      font-family: "Playfair", serif;
+      font-family: 'Playfair', serif;
       margin-bottom: 1px;
     }
 
@@ -32,17 +32,17 @@
       font-size: 12x;
       font-weight: bold;
       color: red;
-      font-family: "Playfair", serif;
+      font-family: 'Playfair', serif;
       margin-bottom: 3px;
     }
 
     .company-description {
       display: flex;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: normal;
-      line-height: 1.2;
-      font-family: "Playfair", serif;
-      text-align: justify;
+      line-height: 1.1;
+      font-family: 'Playfair', serif;
+      text-align: left;
     }
 
     .start {
